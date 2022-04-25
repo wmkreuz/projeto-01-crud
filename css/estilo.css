@@ -1,0 +1,89 @@
+.centro{
+	display:block;
+	size:500px;
+	width:500;
+	height:1010px;
+	background-color:#6BA5E7;
+}
+
+*{
+	margin:0;
+	padding:0;
+	outline:none;
+	list-style:none;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+    font-size: 16px;
+}
+
+a:hover{
+	color:#fff;
+}
+
+body{
+	font:300 16px Oswald;
+	background:#4294DE;
+}
+
+.txt{
+	border:none;
+	height:20px;
+	width:250px;
+	border:thin solid #f1f1f1;
+}
+
+.txt:focus{
+	border:thin solid #678b97;
+}
+
+.sb{
+	display:block;
+	border:none;
+	width:250px;
+	height:40px;
+	margin-top:10px;
+	cursor:pointer;
+	font:400 18px Oswald;
+	color:#999;
+}
+
+.sb:hover{
+	background:#678b97;
+	color:#fff;
+}
+
+
+.bradius{
+	border-radius:6px;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+}
+
+.txt,.txt:focus,.sb,.sb:hover, a, a:hover{
+	transition:all 0.5s linear;
+	-webkit-transition:all 0.5s linear;
+	-moz-transition:all 0.5s linear;
+}
+
+.formtext{
+	padding-bottom:3px;
+	color:white;
+	font:400 18px Oswald
+}
+
+h1{
+    padding: 5px;
+	font:400 30px Oswald
+}
+
+table{
+	background: white;
+}
+
+.icone{
+	width: 15px;
+	height: 15px;
+}
