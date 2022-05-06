@@ -7,27 +7,27 @@
         <center>
             <div class="conteudo">
                 <div class="centro">
-                    <h1>Cadastro de Pessoa</h1>
+                    <h1>Cadastro de Produto</h1>
                     <div class="container">
                         <a href="formPessoa.php" class="bradius">Cad Pessoa</a><?php echo" | ";?>
                         <a href="listaPessoa.php" class="bradius">Lista Pessoa</a><?php echo" | ";?>
                         <a href="formProduto.php" class="bradius">Cad Produto</a><?php echo" | ";?>
                         <a href="listaProduto.php" class="bradius">Lista Produto</a>
                     </div>
-                    <form method="post" action="recebePessoa.php">
+                    <form method="post" action="recebeProduto.php">
                         <?php
-                            if (isset($_GET['cd_pessoa'])) {
+                            if (isset($_GET['cd_produto'])) {
                                 include "conexao.php";
-                                $sql = "SELECT cd_pessoa, nm_pessoa, nr_cpf FROM pessoa WHERE cd_pessoa = $_GET[cd_pessoa]";
+                                $sql = "SELECT cd_produto, nm_produto, qt_estoque FROM produto WHERE cd_produto = $_GET[cd_produto]";
                                 $pessoa = mysqli_fetch_array(mysqli_query($conexao, $sql));
                                 echo "Código: <br>";
-                                echo "<input type='text' name='cd_pessoa' value='$_GET[cd_pessoa]' readonly='readonly' class='txt bradius'><br><br>";
+                                echo "<input type='text' name='cd_produto' value='$_GET[cd_produto]' readonly='readonly' class='txt bradius'><br><br>";
                             }
                         ?>
                         Nome:<br>
-                        <input type="text" name="nm_pessoa" value="<?php if (isset($pessoa['nm_pessoa'])) { echo $pessoa['nm_pessoa']; } ?>" class="txt bradius" required><br><br>
-                        CPF: <br>
-                        <input type="text" name="nr_cpf" value="<?php if (isset($pessoa['nr_cpf'])) { echo $pessoa['nr_cpf']; } ?>" class="txt bradius" required><br><br>
+                        <input type="text" name="nm_produto" value="<?php if (isset($pessoa['nm_produto'])) { echo $pessoa['nm_produto']; } ?>" class="txt bradius" required><br><br>
+                        Qtd: <br>
+                        <input type="text" name="qt_estoque" value="<?php if (isset($pessoa['qt_estoque'])) { echo $pessoa['qt_estoque']; } ?>" class="txt bradius" required><br><br>
                         <input type="submit" value="Enviar" class="sb bradius">
                     </form>
                 </div>

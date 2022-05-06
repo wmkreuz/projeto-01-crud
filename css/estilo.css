@@ -81,9 +81,18 @@ h1{
 
 table{
 	background: white;
+	width: 500px;
 }
 
 .icone{
 	width: 15px;
 	height: 15px;
+}
+
+.container {
+	height: 50px;
+	width: 500px;
+    min-height: 10em;
+    display: table-cell;
+    vertical-align: middle 
 }
